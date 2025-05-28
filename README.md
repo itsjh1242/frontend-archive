@@ -26,6 +26,27 @@ Powered by **React 19**, **TypeScript**, **TailwindCSS**, and **pnpm**.
 
 ---
 
+## 🌱 Branch
+
+### 브랜치 생성 방법
+
+```bash
+# 브랜치 생성 및 이동
+git checkout -b branchname
+
+# 작업 후 커밋
+git add .
+git commit -m "docs: add useEffect cleanup summary"
+
+# 원격 푸시
+git push origin branchname
+
+# 원격 푸시 (최초 푸시 시 upstream 설정 필요)
+git push --set-upstream origin branchname
+```
+
+---
+
 ## 🛠 Tech Stack
 
 - React 19
@@ -53,3 +74,4 @@ Powered by **React 19**, **TypeScript**, **TailwindCSS**, and **pnpm**.
     <img src="https://img.shields.io/badge/TailwindCSS-%5E3.x-38b2ac?logo=tailwindcss" alt="TailwindCSS" />
     <img src="https://img.shields.io/badge/pnpm-%5E8.x-f69220?logo=pnpm" alt="pnpm" />
 </p>
+```
