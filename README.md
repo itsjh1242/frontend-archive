@@ -40,6 +40,9 @@ git commit -m "docs: add useEffect cleanup summary"
 
 # 원격 푸시
 git push origin branchname
+
+# 원격 푸시 (최초 푸시 시 upstream 설정 필요)
+git push --set-upstream origin branchname
 ```
 
 ---
