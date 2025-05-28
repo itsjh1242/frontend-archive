@@ -74,4 +74,3 @@ git push --set-upstream origin branchname
     <img src="https://img.shields.io/badge/TailwindCSS-%5E3.x-38b2ac?logo=tailwindcss" alt="TailwindCSS" />
     <img src="https://img.shields.io/badge/pnpm-%5E8.x-f69220?logo=pnpm" alt="pnpm" />
 </p>
-```
