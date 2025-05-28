@@ -42,8 +42,10 @@ frontend-archive/
   <a href="https://github.com/itsjh1242/frontend-archive/pulls">
     <img src="https://img.shields.io/github/issues-pr/itsjh1242/frontend-archive" alt="pull requests">
   </a>
-  <img src="https://img.shields.io/badge/React-19-blue?logo=react" alt="React 19" />
-  <img src="https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/TailwindCSS-%5E3.x-38b2ac?logo=tailwindcss" alt="TailwindCSS" />
-  <img src="https://img.shields.io/badge/pnpm-%5E8.x-f69220?logo=pnpm" alt="pnpm" />
+</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/React-19-blue?logo=react" alt="React 19" />
+    <img src="https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/TailwindCSS-%5E3.x-38b2ac?logo=tailwindcss" alt="TailwindCSS" />
+    <img src="https://img.shields.io/badge/pnpm-%5E8.x-f69220?logo=pnpm" alt="pnpm" />
 </p>
