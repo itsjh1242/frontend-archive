@@ -7,14 +7,16 @@ Powered by **React 19**, **TypeScript**, **TailwindCSS**, and **pnpm**.
 
 ## 📁 Structure
 
-<details> 
-    <summary>📁 폴더 구조 보기</summary>
+<pre>
+    <code>
+    ```bash
     frontend-archive/
     ├── components/   # 재사용 가능한 UI 컴포넌트
     ├── demos/        # 실험용 데모 프로젝트
     ├── docs/         # 기술별 정리 문서
     ├── snippets/     # 코드 스니펫 및 유틸 함수
-</details>
+    </code>
+</pre>
 
 ---
 
