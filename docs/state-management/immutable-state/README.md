@@ -40,3 +40,36 @@
 | UI 감지 여부   | 주소 동일하면 감지 실패 가능 | 주소 변경 -> 항상 감지 |
 | 추적/디버깅    | 언제 바뀌었는지 추적 어려움  | 변경 지점이 명확       |
 | 사이드 이펙트  | 발생 가능                    | 거의 없음              |
+
+## 잘못된 예시 (상태 값을 직접 수정)
+
+```dart
+// Flutter
+state.list.add(photo);
+
+// React
+list.push(item);
+setList(list); // 같은 주소 -> UI 안 바뀔 수 있음
+```
+
+## 올바른 방식 (불변: 복사본으로 새 객체 만들기)
+
+```dart
+// Flutter
+state = state.copyWith(list: [...state.list, photo]);
+
+// React
+setList([...list, item]);
+```
+
+## 계속 새 객체 만들면 메모리 낭비 아닌가? -> NO
+
+- 참조가 끊긴 객체는 GC(Garbage Collector)가 자동 해제
+- 이전 상태는 더 이상 사용되지 않기 때문에 쌓이지 않음
+- 상태 객체는 대부분 가볍기 때문에 성능 문제 거의 없음
+
+## 정리
+
+- 불변 상태 관리는 안정성, 예측 가능성, 성능을 위한 기본 원칙
+- React, Flutter 등 상태 기반 UI 프레임워크에서는 필수적
+- 실수 예방, 유지보수성 향상을 위해 copyWith / spread 연산자 등 불변 패턴을 적극 사용
