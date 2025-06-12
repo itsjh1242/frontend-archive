@@ -121,9 +121,39 @@ setUser((prev) => ({ ...prev, name: "민수" }));
   -> `setCount(count + 1)` 같이 set함수로만 변경해야함
 - 상태 업데이트가 비동기일 수 있으니, 이전 값을 기반으로 할 땐 함수형 업데이트 사용:
 
-```tsx
-setCount((prev) => prev + 1); // 안전하고 정확함!
-```
+  ```tsx
+  setCount((prev) => prev + 1); // 안전하고 정확함!
+  ```
+
+- 연속 호출 시 주의점 - 마지막 호출만 반영될 수 있다
+
+  ```tsx
+  <button onClick={() => {
+    setNumber(number + 1); // A
+    setNumber(n => n + 1); // B
+    setNumber(number + 1); // C
+  }}>
+  ```
+
+  `number`가 0일 때, 실행 순서:
+
+  1. A: setNumber(1)
+  2. B: 이전 상태 1 -> setNumber(2)
+  3. C: 여전히 초기 number = 0 -> setNumber(1)
+
+  최종적으로 가장 마지막 C (`setNumber(1)`)만 반영됨: 결과적으로 +1만 적용됨
+
+  이럴 땐 함수형 업데이트로 누적 적용하자
+
+  ```tsx
+  <button onClick={() => {
+    setNumber(n => n + 1);
+    setNumber(n => n + 1);
+    setNumber(n => n + 1);
+  }}>
+  ```
+
+  여기선 `n`이 실제로 갱신된 값을 반영하므로: 정확히 +3 증가함
 
 ## Reference
 
